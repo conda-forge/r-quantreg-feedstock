@@ -15,7 +15,8 @@ source:
   sha256: 3a12012caeca2c1b688f542c26f21779c2c27734ea81edc1b205344654af39b6
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -23,19 +24,21 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('fortran') }}        # [unix]
+    - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-matrix
     - r-matrixmodels
     - r-sparsem
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
   run:
     - r-base
     - r-matrix
     - r-matrixmodels
     - r-sparsem
-    - libgcc  # [not win]
 
 test:
   commands:
