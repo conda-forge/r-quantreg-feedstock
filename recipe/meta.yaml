@@ -1,4 +1,4 @@
-{% set version = "5.54" %}
+{% set version = "5.55" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quantreg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quantreg/quantreg_{{ version }}.tar.gz
-  sha256: 703b2c67d88e95eaf1bf3c09fc64c1964bcc1145244c8bc8c0e5ac99713ad0a6
+  sha256: cbe1541409aed8222a41043958ab9c352b84dba4e0766b54bf1eac59d2454cfe
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -50,13 +50,11 @@ test:
 about:
   home: https://www.r-project.org
   license: GPL (>= 2)
-  summary: 'Estimation and inference methods for models of conditional quantiles:  Linear and
-    nonlinear parametric and non-parametric (total variation penalized) models  for
-    conditional quantiles of a univariate response and several methods for handling
-    censored survival data.  Portfolio selection methods based on expected shortfall
-    risk are also included.'
+  summary: 'Estimation and inference methods for models of conditional quantiles:  Linear and nonlinear parametric and non-parametric (total variation penalized)
+    models  for conditional quantiles of a univariate response and several methods for handling censored survival data.  Portfolio selection methods based on expected
+    shortfall risk are also included.'
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
