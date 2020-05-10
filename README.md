@@ -3,7 +3,7 @@ About r-quantreg
 
 Home: https://www.r-project.org
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD 3-Clause
 
