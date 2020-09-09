@@ -37,12 +37,14 @@ requirements:
     - r-matrix
     - r-matrixmodels
     - r-sparsem
+    - r-conquer
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
+    - {{native}}gcc-libs         # [win]
     - r-matrix
     - r-matrixmodels
     - r-sparsem
+    - r-conquer
 
 test:
   commands:
@@ -55,7 +57,8 @@ about:
   summary: 'Estimation and inference methods for models of conditional quantiles:  Linear and nonlinear parametric and non-parametric (total variation penalized) models  for conditional quantiles of a univariate response and several methods for handling censored survival data.  Portfolio selection methods based on expected
     shortfall risk are also included.'
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
