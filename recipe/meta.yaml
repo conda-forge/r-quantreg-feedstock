@@ -34,12 +34,14 @@ requirements:
     - libblas
     - liblapack
     - r-base
+    - r-conquer
     - r-matrix
     - r-matrixmodels
     - r-sparsem
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
+    - r-conquer
     - r-matrix
     - r-matrixmodels
     - r-sparsem
