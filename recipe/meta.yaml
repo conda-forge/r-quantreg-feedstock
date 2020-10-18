@@ -1,4 +1,4 @@
-{% set version = "5.73" %}
+{% set version = "5.74" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quantreg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quantreg/quantreg_{{ version }}.tar.gz
-  sha256: c48b030c44efef75b25bf656d417ce15504a83038d820469bed6b1c386e45c56
+  sha256: aac684387f5f5317e61f9640305a8b767ddcf7370eb715c4d1cacc218edaa74d
 
 build:
   merge_build_host: true  # [win]
