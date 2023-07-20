@@ -3,6 +3,7 @@ About r-quantreg-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-quantreg-feedstock/blob/main/LICENSE.txt)
 
+
 About r-quantreg
 ----------------
 
@@ -11,6 +12,7 @@ Home: https://www.r-project.org
 Package license: GPL-2.0-or-later
 
 Summary: Estimation and inference methods for models of conditional quantiles:  Linear and nonlinear parametric and non-parametric (total variation penalized) models  for conditional quantiles of a univariate response and several methods for handling censored survival data.  Portfolio selection methods based on expected shortfall risk are also included.
+
 About r-quantreg
 ----------------
 
