@@ -1,4 +1,4 @@
-{% set version = "5.96" %}
+{% set version = "5.97" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quantreg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quantreg/quantreg_{{ version }}.tar.gz
-  sha256: a2aa0638cdd626d8da0e573856177c4637841c6de143463a3fc0bbe268e6fd92
+  sha256: 87e7de5776dee936ef0809dcc9ac2e0d51a7580368e6defa12ec21276a676da1
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -62,7 +62,7 @@ about:
   summary: 'Estimation and inference methods for models of conditional quantiles:  Linear and nonlinear parametric and non-parametric (total variation penalized) models  for conditional quantiles of a univariate response and several methods for handling censored survival data.  Portfolio selection methods based on expected
     shortfall risk are also included.'
   license_family: GPL3
-  license_file: 
+  license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
