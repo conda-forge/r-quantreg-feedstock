@@ -1,4 +1,4 @@
-{% set version = "5.97" %}
+{% set version = "5.98" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quantreg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quantreg/quantreg_{{ version }}.tar.gz
-  sha256: 87e7de5776dee936ef0809dcc9ac2e0d51a7580368e6defa12ec21276a676da1
+  sha256: a98cb259d8cf563f66a25ae8858794e574dd40de6206816ad61b1ffeb9686a61
 
 build:
   merge_build_host: true  # [win]
@@ -27,7 +27,9 @@ requirements:
     - r-sparsem                        # [build_platform != target_platform]
     - r-matrixmodels                   # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('fortran') }}        # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ posix }}filesystem            # [win]
