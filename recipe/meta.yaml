@@ -1,4 +1,4 @@
-{% set version = "6.00" %}
+{% set version = "6.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quantreg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quantreg/quantreg_{{ version }}.tar.gz
-  sha256: 8b5f40266c9358560bc6832e99d5068a77f0e7574f7d8f2fa6525ffa453b7dab
+  sha256: f42292c5ab25a15f39295b93391deafef192fe09eefde563399a64eba7e0169a
 
 build:
   number: 0
